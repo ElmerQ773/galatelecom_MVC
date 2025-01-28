@@ -1,0 +1,144 @@
+extends ../layout/index
+
+block contenido 
+    header(class="fixed inset-x-0 top-0 z-30 mx-auto w-6/12 max-w-screen-md border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg md:top-6 md:rounded-3xl lg:max-w-screen-lg")
+            div(class="px-4 flex flex-row space-x-8")
+                
+                    div(class="shrink-0 mx-10")
+                            img(class="h-14 w-auto" src="/img/logo.png" alt="")
+            
+                    div(class="hidden mx-5 md:flex md:items-center md:justify-center md:gap-5")
+                        p(class="inline-block rounded-lg px-2 py-1 text-2xl font-medium text-gray-900 transition-all duration-200 hover:bg-gray-100 hover:text-gray-900")= nombreUsuario
+                        
+            
+                    div(class=" flex mx-10 items-center justify-end gap-3")
+                        a(class="inline-flex items-center justify-center rounded-xl bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-150 hover:bg-red-500 focus-visible:outline cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" href="/auth/login") Salir   
+      
+    div(class="mx-auto mt-24 mb-20 max-w-6xl text-center p-6 dark:bg-gray-900")
+        div(class="mt-20")
+            h2(class="mb-12 text-center text-4xl font-extrabold text-gray-900 dark:text-gray-200 sm:text-5xl") Aplicativos
+        
+    
+        div(class="gr mx-auto max-w-3xl items-stretch space-y-4 text-left sm:flex sm:space-y-0 sm:space-x-8 sm:text-center")
+            button(id="btn-MW" class="flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl")
+                div(id="dropdown-MW" class="invisible opacity-0 absolute w-60 shadow-sm rounded-md mt-1 bg-white -translate-x-40")
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") Panel admin 
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") Panel cliente
+                img(class="mr-4 w-12 sm:mr-0 sm:h-32 sm:w-32" src="/img/mikrowisp.png" alt="Mikrowisp")
+                div
+                    div(class="font-semibold text-black dark:text-white sm:mt-4 sm:mb-2") Mikrowisp
+                    div(class="text-sm opacity-75") Mikrowisp es un sistema administrador de red y gestion ISP
+                
+            
+        
+            button(class="flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl")
+                img(class="mr-4 w-12 rounded-md sm:mr-0 sm:h-32 sm:w-32" src="/img/webmail2.webp" alt="webmail")
+                div
+                    div(class="font-semibold text-black dark:text-white sm:mt-4 sm:mb-2") Webmail
+                    div(class="text-sm opacity-75") Correo electronico corporativo GALAIT
+            
+        
+            button(id="btn-OZ" class="flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl")
+                div(id="dropdown-OZ" class="invisible opacity-0 absolute w-60 shadow-sm rounded-md mt-1 bg-white -translate-x-40")
+                    a(href="" class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OzMap 
+                    a(href="" class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OzConverter
+                img(class="mr-4 w-12 sm:mr-0 rounded-md sm:h-32 sm:w-32" src="/img/ozmap.png" alt="ozmap")
+                div
+                    div(class="font-semibold text-black dark:text-white sm:mt-4 sm:mb-2") OZmap
+                    div(class="text-sm opacity-75") Mapeo de Red FTTx Online
+            
+          
+        div(class="gr mx-auto my-10 max-w-3xl items-stretch space-y-4 text-left sm:flex sm:space-y-0 sm:space-x-8 sm:text-center")
+
+            button(class="flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl")
+                img(class="mr-4 w-12 rounded-md sm:mr-0 sm:h-32 sm:w-32" src="/img/cpanel.png" alt="cpanel")
+                div
+                    div(class="font-semibold text-black dark:text-white sm:mt-4 sm:mb-2") cPanel
+                    div(class="text-sm opacity-75") Panel de control para administrar servidores
+
+            button(class="flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl")
+                img(class="mr-4 w-12 sm:mr-0 sm:h-32 sm:w-32" src="/img/uisp.webp" alt="")
+                div
+                    div(class="font-semibold text-black dark:text-white sm:mt-4 sm:mb-2") UISP
+                    div(class="text-sm opacity-75") Gestión completa de red ISP
+
+            button(id="btn-OLT" class="flex w-full items-center rounded-xl border border-black border-opacity-10 px-4 py-6 text-black duration-200 hover:border-opacity-0 hover:no-underline hover:shadow-lg dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 sm:flex-col sm:hover:shadow-2xl")
+                div(class="invisible opacity-0 absolute w-60 shadow-sm rounded-md mt-1 bg-white translate-x-40 -translate-y-40" id="dropdown-OLT")
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OLT Lidomar 1
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OLT Lidomar 2
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OLT Lidomar 3
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OLT Guarataro
+                    a(class="flex items-center px-16 gap-3 p-3 no-underline stroke-stone-900 hover:bg-blue-700 hover:text-white") OLT Easo 
+                img(class="mr-4 w-12 sm:mr-0 sm:h-32 rounded-md sm:w-32" src="/img/olt.jpg" alt="OLT")
+                div
+                    div(class="font-semibold text-black dark:text-white sm:mt-4 sm:mb-2") OLT's
+                    div(class="text-sm opacity-75") Gestión completa de red ISP
+
+    script.
+        // script boton OLT
+        const dropdownBtnOlt = document.getElementById("btn-OLT");
+        const dropdownMenuOlt = document.getElementById("dropdown-OLT");
+            
+
+        const toggleDropdownOlt = function () {
+                    dropdownMenuOlt.classList.toggle("invisible");
+                    dropdownMenuOlt.classList.toggle("opacity-0");
+                    dropdownMenuOlt.classList.toggle("show");
+                    };
+
+        dropdownBtnOlt.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    toggleDropdownOlt();
+                    console.log(dropdownMenuOlt)
+                        }); 
+        
+        document.documentElement.addEventListener("click", function () {
+            if (dropdownMenuOlt.classList.contains("show")) {
+                toggleDropdownOlt();
+            }
+            });
+
+        //script boton MW
+        const dropdownBtnMw = document.getElementById("btn-MW");
+        const dropdownMenuMw = document.getElementById("dropdown-MW");
+            
+
+        const toggleDropdownMw = function () {
+                    dropdownMenuMw.classList.toggle("invisible");
+                    dropdownMenuMw.classList.toggle("opacity-0");
+                    dropdownMenuMw.classList.toggle("show");
+                    };
+
+        dropdownBtnMw.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    toggleDropdownMw();
+                        }); 
+
+        document.documentElement.addEventListener("click", function () {
+            if (dropdownMenuMw.classList.contains("show")) {
+                toggleDropdownMw();
+            }
+            });
+
+        //script boton OZ
+        const dropdownBtnOz = document.getElementById("btn-OZ");
+        const dropdownMenuOz = document.getElementById("dropdown-OZ");
+            
+
+        const toggleDropdownOz = function () {
+                    dropdownMenuOz.classList.toggle("invisible");
+                    dropdownMenuOz.classList.toggle("opacity-0");
+                    dropdownMenuOz.classList.toggle("show");
+                    };
+
+        dropdownBtnOz.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    toggleDropdownOz();
+                        }); 
+
+        document.documentElement.addEventListener("click", function () {
+            if (dropdownMenuOz.classList.contains("show")) {
+                toggleDropdownOz();
+            }
+            });
+    
