@@ -1,0 +1,1 @@
+# galatelecom_MVC
